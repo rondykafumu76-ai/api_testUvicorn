@@ -12,10 +12,22 @@ def read_item():
                 }
             }
 
-@app.get("/hello")
-def read_item():
-    return {"data": 
+@app.get("/hello/{id}")
+def read_item(id):
+    return {
+        "data": 
             {
-                "name":"rondy"
-                }
+                "id":id
             }
+            
+    }
+
+@app.get("/hello/{id}/commets/")
+def read_item(id:int):
+    return {
+        "data": 
+            {
+                "1","2"
+            }
+            
+    }
