@@ -1,0 +1,6 @@
+Creation de l'environnement virtuel
+python -m venv nom_du_dossier env // activation de l'environnement virtuel
+
+
+
+

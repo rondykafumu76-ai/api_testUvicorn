@@ -4,13 +4,17 @@ app = FastAPI()
 
 
 
-@app.get("/")
-def read_item():
-    return {"data": 
-            {
-                "name":"sarthak"
+@app.get("/blog")
+def read_item(limit,published):
+
+    if published == False:
+        return {"data": 
+                {
+                    "name":f'{limit} sarthak'
                 }
             }
+    elif published == True:
+        return {'data':"error"}
 
 @app.get("/hello/{id}")
 def read_item(id):
