@@ -1,8 +1,14 @@
 from fastapi import FastAPI
 from pydantic import BaseModel
+from . import schemas, models
+from database import engine
 import uvicorn
 
 app = FastAPI()
+
+
+#Models database
+models.Base.metadata.create_all(engine )
 
 
 class Blog(BaseModel):
